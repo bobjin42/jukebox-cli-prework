@@ -43,7 +43,8 @@ def play(my_songs)
   puts "Please enter a song name or number:"
   input = gets.chomp
   if songs.include?(input)
-    system 'open <file path>'
+    location = my_songs[input]
+    system 'open #{location}'
   else
     puts "Invalid input, please try again"
   end 
